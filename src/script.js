@@ -1,6 +1,6 @@
-const canvass = document.querySelectorAll("canvas");
+const canvass = document.querySelectorAll('canvas');
 for (const canvas of canvass) {
-  const ctx = canvas.getContext("2d");
+  const ctx = canvas.getContext('2d');
 
   const width = (canvas.width = window.innerWidth);
   const height = (canvas.height = 300);
@@ -72,7 +72,7 @@ for (const canvas of canvass) {
     balls.push(ball);
   }
   function loop() {
-    ctx.fillStyle = `${"rgba(10, 2, 4,0.2)"}`;
+    ctx.fillStyle = `${'rgba(10, 2, 4,0.2)'}`;
     ctx.fillRect(0, 0, width, height);
 
     for (const ball of balls) {
@@ -86,7 +86,7 @@ for (const canvas of canvass) {
 }
 
 //3D cube
-const aside = document.querySelector("aside");
+const aside = document.querySelector('aside');
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(
   75,
@@ -102,7 +102,7 @@ const add = document.body.appendChild(renderer.domElement);
 let cube = [];
 
 const loader = new THREE.TextureLoader();
-const images = ["images/about2.png"];
+const images = ['images/about2.png'];
 for (const image of images) {
   loader.load(`${image}`, (texture) => {
     texture.repeat.set(1, 1);
@@ -116,7 +116,7 @@ for (const image of images) {
   });
 }
 
-const light = new THREE.AmbientLight("rgb(255,255,255)"); // soft white light
+const light = new THREE.AmbientLight('rgb(255,255,255)'); // soft white light
 scene.add(light);
 
 /*const spotLight = new THREE.SpotLight('rgb(255,255,255)');
